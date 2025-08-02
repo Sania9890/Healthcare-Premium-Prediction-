@@ -17,8 +17,7 @@ Healthcare premiums depend on multiple factors like age, smoking status, BMI, an
 - **Matplotlib, Seaborn** – Data visualization
 - **Scikit-learn** – ML modeling, encoding, evaluation
 - **XGBoost / Random Forest** – Advanced regressors
-- **SHAP** – Model interpretability
-- **Streamlit** *(optional)* – Dashboard for user interaction
+  
 
 ---
 
@@ -31,6 +30,13 @@ Healthcare premiums depend on multiple factors like age, smoking status, BMI, an
 - Pairplots and correlation heatmaps
 
 ---
+### 🧼 Handling Null Values
+- Checked for missing values using `df.isnull().sum()`
+- No nulls in the original dataset, but pipeline includes imputation strategy (e.g., mean/mode) for robustness
+
+### 🔁 Removing Duplicates
+- Used `df.duplicated().sum()` to identify duplicates
+- Removed duplicates using `df.drop_duplicates()` to ensure model learns from diverse examples
 
 ## 🧼 Data Preprocessing
 
